@@ -1,4 +1,4 @@
-FROM golang:1.8
+FROM golang:1.26
 MAINTAINER Shahriar  ë Boroujerdin
 
 RUN mkdir -p /go/src/github.com/shahriarb
