@@ -1,11 +1,13 @@
 FROM golang:1.26
-MAINTAINER Shahriar  ë Boroujerdin
 
-RUN mkdir -p /go/src/github.com/shahriarb
-ADD . /go/src/github.com/shahriarb/build_sample
+# maintainer info
+LABEL maintainer="Cloud 66"
 
-WORKDIR /go/src/github.com/shahriarb/build_sample
-ENV GO15VENDOREXPERIMENT 1
-RUN go get
+WORKDIR /app
+
+# copy module file and source code
+COPY go.mod ./
+COPY . .
+
+# build the binary
 RUN go build -o ha_build_sample
-

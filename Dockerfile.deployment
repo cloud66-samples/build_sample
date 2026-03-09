@@ -1,11 +1,12 @@
 FROM ubuntu:24.04
-MAINTAINER Shahriar  ë Boroujerdin
 
-#switch to our app directory
-RUN mkdir -p /app
+# maintainer info
+LABEL maintainer="Cloud 66"
+
+# switch to our app directory
 WORKDIR /app
 
-#copy the source files
+# copy the built binary
 COPY ./ha_build_sample /app
 
 CMD ["/app/ha_build_sample"]

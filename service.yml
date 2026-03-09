@@ -1,6 +1,6 @@
 services:  
   hello:
-    git_url: http://github.com/shahriarb/build_sample.git
+    git_url: http://github.com/cloud66-samples/build_sample.git
     git_branch: habitus
     use_habitus: true
     use_habitus_step: deployment
